@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-import Home from "./pages/Home/home";
+import Home from "./pages/Home/Home";
 import Welcome from "./components/Loader/Loader";
 import "./App.css";
 
@@ -24,11 +24,11 @@ function App() {
   return showWelcome ? (
     <Welcome onFinish={finishWelcome} />
   ) : (
-    <>
+    <div className="App">
       <Header />
       <Home />
       <Footer />
-    </>
+    </div>
   );
 }
 

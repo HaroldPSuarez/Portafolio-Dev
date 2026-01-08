@@ -7,6 +7,7 @@ interface SplitTextProps {
   className?: string;
   duration?: number;
   delay?: number;
+  leaving?: boolean;
   onComplete?: () => void;
 }
 
@@ -15,6 +16,7 @@ const SplitText = ({
   className,
   duration = 0.6,
   delay = 0,
+  leaving = false,
   onComplete,
 }: SplitTextProps) => {
   const textRef = useRef<HTMLHeadingElement | null>(null);
@@ -24,20 +26,32 @@ const SplitText = ({
 
     const letters = textRef.current.querySelectorAll("span");
 
-    gsap.fromTo(
-      letters,
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1,
-        y: 0,
-        duration,
-        delay,
-        stagger: 0.05,
-        ease: "power3.out",
+    if (!leaving) {
+      // 🔵 ENTRADA
+      gsap.fromTo(
+        letters,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration,
+          delay,
+          stagger: 0.05,
+          ease: "power3.out",
+        }
+      );
+    } else {
+      // 🔴 SALIDA
+      gsap.to(letters, {
+        opacity: 0,
+        y: -40,
+        duration: 0.5,
+        stagger: 0.04,
+        ease: "power3.in",
         onComplete,
-      }
-    );
-  }, [duration, delay, onComplete]);
+      });
+    }
+  }, [leaving, duration, delay, onComplete]);
 
   return (
     <h1 ref={textRef} className={className}>
@@ -49,4 +63,5 @@ const SplitText = ({
     </h1>
   );
 };
+
 export default SplitText;
