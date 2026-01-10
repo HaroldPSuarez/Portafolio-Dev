@@ -1,9 +1,22 @@
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 1em;
-    padding: 2em;
-    margin: auto;
-    text-align: center;
-    color: white;
-    
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 1em auto;
+  width: 70%;
+  box-sizing: border-box;
+  
 }
+
+.menu {
+    color: black;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+  
+  
+}
+
+
+

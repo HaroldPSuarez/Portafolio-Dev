@@ -24,7 +24,7 @@ function App() {
   return showWelcome ? (
     <Welcome onFinish={finishWelcome} />
   ) : (
-    <div className="App">
+    <div className="Estructura">
       <Header />
       <Home />
       <Footer />
