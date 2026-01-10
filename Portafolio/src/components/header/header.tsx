@@ -1,7 +1,7 @@
 import "./Header.css";
 function Header() {
   return (
-    <div className="header">
+    <div className="Header">
       <nav>
         <ul className="menu">
           <li>
