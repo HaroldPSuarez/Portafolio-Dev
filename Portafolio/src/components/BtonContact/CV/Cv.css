@@ -1,0 +1,16 @@
+.Cv{
+    background-color: rgb(63, 230, 152);
+    padding: 1rem;
+    width: fit-content;
+    border-radius:0.5rem;
+    text-decoration: none;
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+
+}
+.btn cv-btn{
+
+    
+}
+

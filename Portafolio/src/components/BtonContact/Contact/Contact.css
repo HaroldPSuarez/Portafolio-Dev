@@ -1,0 +1,15 @@
+.ContactBtn{
+    background-color: rgb(212, 212, 212);
+    padding: 1rem;
+    width: fit-content;
+    border-radius:0.5rem;
+    text-decoration: none;
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+
+}
+.btn contact-btn{
+
+}
+
