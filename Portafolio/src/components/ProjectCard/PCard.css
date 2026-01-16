@@ -1,5 +1,100 @@
-.Pcard{
-    background-color: rgb(133, 133, 133);
-    border-radius: 2.5rem;
-    padding: 7rem 5rem ;
+.Pcard {
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Pcard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* 🖼️ Imagen */
+.PCard-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* 📦 Contenido */
+.PCard-content {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+/* 🏷️ Título */
+.PCard-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* 📝 Descripción */
+.PCard-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+/* 🧩 Tecnologías */
+.PCard-techs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.PCard-techs li {
+  background: #222;
+  color: #aaa;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+/* 🔗 Links */
+.PCard-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.PCard-links a {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #fff;
+  background: #2563eb;
+  transition: background 0.3s ease;
+}
+
+.PCard-links a:hover {
+  background: #1e40af;
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .PCard-image {
+    height: 150px;
+  }
+
+  .PCard-title {
+    font-size: 1.1rem;
+  }
+
+  .PCard-desc {
+    font-size: 0.85rem;
+  }
 }

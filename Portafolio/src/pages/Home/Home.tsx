@@ -1,7 +1,9 @@
 import Contact from "../../components/BtonContact/Contact/Contact";
 import Cv from "../../components/BtonContact/CV/CV";
 import PCard from "../../components/ProjectCard/PCard";
+import { projects } from "../../data/Projects";
 import "./Home.css";
+
 function Home() {
   return (
     <main className="Home">
@@ -16,17 +18,18 @@ function Home() {
           Diseños elegantes, Modernos y Intuitivos
         </p>
       </article>
+
       <div className="actions">
         <Cv />
         <Contact />
       </div>
+
       <h2>Projects</h2>
+
       <div className="PcardFlex">
-        <PCard />
-        <PCard />
-        <PCard />
-        <PCard />
-        <PCard />
+        {projects.map((project) => (
+          <PCard key={project.id} project={project} />
+        ))}
       </div>
     </main>
   );

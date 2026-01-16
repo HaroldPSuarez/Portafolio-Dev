@@ -15,23 +15,90 @@ a {
 button {
   font-family: inherit;
 }
-article h1{
+article h1 {
   font-size: 6rem;
   color: aliceblue;
-  
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  article h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  article h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 article p{
   font-size: 1.3rem;
   color: rgb(189, 189, 189);
 }
 
-.actions{
-  margin: 3rem;
+.actions {
+  margin: 5rem;
   display: flex;
   gap: 1rem;
 }
+
+.ContactBtn {
+  background-color: rgb(212, 212, 212);
+  padding: 1rem;
+  width: fit-content;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.ContactBtn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem;
+  }
+  
+  .ContactBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
 h2{
+  font-size: 3rem;
+  justify-content: center;
   margin: 5rem;
+  color: aliceblue;
 }
 
 .PcardFlex{
