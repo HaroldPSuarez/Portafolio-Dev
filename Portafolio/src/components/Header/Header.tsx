@@ -1,4 +1,5 @@
 import "./Header.css";
+
 function Header() {
   return (
     <div className="Header">
@@ -14,8 +15,9 @@ function Header() {
             <a href="#about">Sobre mí</a>
           </li>
           <li>
-            <a href="#contact">Contacto</a>
-          </li>
+            <a href="#contacto">Contacto</a>
+          </li>{" "}
+          {/* ← fix */}
         </ul>
       </nav>
     </div>

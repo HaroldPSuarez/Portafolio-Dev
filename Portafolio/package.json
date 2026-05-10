@@ -12,7 +12,8 @@
   "dependencies": {
     "@appletosolutions/reactbits": "^1.0.3",
     "@gsap/react": "^2.1.2",
-    "gsap": "^3.14.2",
+    "devicons-react": "^1.5.0",
+    "gsap": "^3.15.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

@@ -38,4 +38,23 @@ export const projects: Project[] = [
     codeLink: "https://github.com/HaroldPSuarez/Portafolio-Dev.git",
     image: "/3.png",
   },
+  {
+    id: 1,
+    name: "Riesgo Crediticio",
+    description: "Aplicación frontend para análisis de riesgo crediticio.",
+    technologies: ["React", "SpringBoot", "HTML", "CSS", "JSX", "SQL"],
+    demoLink: "Link Proximamente",
+    codeLink: "https://github.com/HaroldPSuarez/Riesgo_crediticio.git",
+    image: "/1.jpg",
+  },
+  {
+    id: 2,
+    name: "Tienda Carros",
+    description:
+      "Tienda donde te permite ver cotizar y comprar autos clasicos.",
+    technologies: ["Angular", "JSX", "CSS", "HTML", "SQL"],
+    demoLink: "lINK Proximamente",
+    codeLink: "https://github.com/HaroldPSuarez/AngularPage.git",
+    image: "/2.png",
+  },
 ];

@@ -1,45 +1,54 @@
 .Pcard {
-  background: #111;
+  width: 320px;
+  min-height: 420px; /* ← altura mínima uniforme */
+  background: #111827; /* ← azul-negro, menos plano que #111 */
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06); /* ← borde sutil */
 }
 
 .Pcard:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(99, 102, 241, 0.3); /* ← glow suave en hover */
 }
 
 /* 🖼️ Imagen */
 .PCard-image {
   width: 100%;
-  height: 180px;
+  height: 190px; /* ← un poco más de espacio para el preview */
   object-fit: cover;
+  object-position: top; /* ← muestra la parte superior del screenshot */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* 📦 Contenido */
 .PCard-content {
-  padding: 1.2rem;
+  padding: 1.4rem; /* ← un poco más de respiro */
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  flex: 1; /* ← ocupa el espacio restante */
 }
 
 /* 🏷️ Título */
 .PCard-title {
   font-size: 1.2rem;
-  font-weight: 600;
-  color: #fff;
+  font-weight: 700; /* ← más peso */
+  color: #f1f5f9;   /* ← blanco suave, no puro */
+  letter-spacing: -0.01em;
 }
 
 /* 📝 Descripción */
 .PCard-desc {
-  font-size: 0.9rem;
-  color: #ccc;
-  line-height: 1.4;
+  font-size: 0.875rem;
+  color: #94a3b8; /* ← slate más armonioso */
+  line-height: 1.6; /* ← más legible */
+  flex: 1; /* ← empuja los tags y botones hacia abajo */
 }
 
 /* 🧩 Tecnologías */
@@ -49,52 +58,74 @@
   flex-wrap: wrap;
   gap: 0.4rem;
   padding: 0;
-  margin: 0.5rem 0;
+  margin: 0;
 }
 
 .PCard-techs li {
-  background: #222;
-  color: #aaa;
-  padding: 0.3rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.75rem;
+  background: rgba(99, 102, 241, 0.1); /* ← tono índigo, más carácter */
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px; /* ← menos redondeado, más técnico */
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 /* 🔗 Links */
 .PCard-links {
   display: flex;
   gap: 0.6rem;
-  margin-top: auto;
+  margin-top: 1rem;
 }
 
 .PCard-links a {
   flex: 1;
   text-align: center;
   text-decoration: none;
-  padding: 0.5rem 0;
-  border-radius: 10px;
+  padding: 0.55rem 0;
+  border-radius: 8px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
-  background: #2563eb;
-  transition: background 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-.PCard-links a:hover {
-  background: #1e40af;
+/* ← dos estilos distintos para Demo y Código */
+.PCard-links a:first-child {
+  background: #2563eb;
+}
+.PCard-links a:first-child:hover {
+  background: #1d4ed8;
+}
+
+.PCard-links a:last-child {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+}
+.PCard-links a:last-child:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
 }
 
 /* 📱 Responsive */
 @media (max-width: 600px) {
+  .Pcard {
+    width: 100%;
+  }
+
   .PCard-image {
-    height: 150px;
-  }
-
-  .PCard-title {
-    font-size: 1.1rem;
-  }
-
-  .PCard-desc {
-    font-size: 0.85rem;
-  }
+    height: 160px;
+  }.PCard-links--soon {
+  flex: 1;
+  text-align: center;
+  padding: 0.55rem 0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  cursor: not-allowed;
+}
 }

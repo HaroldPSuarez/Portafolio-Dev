@@ -1,11 +1,10 @@
 import "./Contact.css";
+
 function Contact() {
   return (
-    <div className="ContactBtn">
-      <a href="#" className="btn contact-btn">
-        Contact
-      </a>
-    </div>
+    <a href="#contacto" className="ContactBtn">
+      Contact
+    </a>
   );
 }
 

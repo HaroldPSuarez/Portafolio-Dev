@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SplitText from "../SplitText/SplitText";
+import SplitText from "../../Animations/SplitText/SplitText";
 import "./Loader.css";
 
 const Welcome = ({ onFinish }: { onFinish: () => void }) => {

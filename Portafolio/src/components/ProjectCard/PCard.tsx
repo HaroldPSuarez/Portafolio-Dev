@@ -21,12 +21,14 @@ function PCard({ project }: PCardProps) {
         </ul>
 
         <div className="PCard-links">
-          {project.demoLink && (
-            <a href={project.demoLink} target="_blank">
+          {project.demoLink ? ( // ← solo renderiza si hay link
+            <a href={project.demoLink} target="_blank" rel="noreferrer">
               Demo
             </a>
+          ) : (
+            <span className="PCard-links--soon">Próximamente</span> // ← span deshabilitado
           )}
-          <a href={project.codeLink} target="_blank">
+          <a href={project.codeLink} target="_blank" rel="noreferrer">
             Código
           </a>
         </div>
