@@ -29,7 +29,7 @@ function PCard({ project }: PCardProps) {
             <span className="PCard-links--soon">Próximamente</span> // ← span deshabilitado
           )}
           <a href={project.codeLink} target="_blank" rel="noreferrer">
-            Código
+            Code
           </a>
         </div>
       </div>

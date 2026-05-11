@@ -3,6 +3,8 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import Welcome from "./components/Loader/Loader";
+import LinesUp from "./components/Background/Lines/LinesUp";
+import LinesDown from "./components/Background/Lines/LinesDown";
 import "./App.css";
 
 function App() {
@@ -10,7 +12,6 @@ function App() {
 
   useEffect(() => {
     const seen = sessionStorage.getItem("welcome-seen");
-
     if (seen) {
       setShowWelcome(false);
     }
@@ -24,11 +25,15 @@ function App() {
   return showWelcome ? (
     <Welcome onFinish={finishWelcome} />
   ) : (
-    <div className="Estructura">
-      <Header />
-      <Home />
-      <Footer />
-    </div>
+    <>
+      <LinesUp />
+      <LinesDown />
+      <div className="Estructura">
+        <Header />
+        <Home />
+        <Footer />
+      </div>
+    </>
   );
 }
 
