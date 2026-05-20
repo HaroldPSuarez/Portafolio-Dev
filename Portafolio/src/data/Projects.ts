@@ -39,7 +39,7 @@ export const projects: Project[] = [
     image: "/3.png",
   },
   {
-    id: 1,
+    id: 4,
     name: "Riesgo Crediticio",
     description: "Aplicación frontend para análisis de riesgo crediticio.",
     technologies: ["React", "SpringBoot", "HTML", "CSS", "JSX", "SQL"],
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     image: "/1.jpg",
   },
   {
-    id: 2,
+    id: 5,
     name: "Tienda Carros",
     description:
       "Tienda donde te permite ver cotizar y comprar autos clasicos.",

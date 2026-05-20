@@ -1,0 +1,76 @@
+/* ── Wrapper ── */
+.projects-more-wrapper {
+  position: relative;
+  margin-top: 0;
+}
+
+/* ── Fila oculta ── */
+.projects-hidden-row {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-hidden-row.open {
+  max-height: 2000px;
+}
+
+.projects-hidden-row .PcardFlex {
+  margin-top: 1.5rem;
+}
+
+/* ── Barra de difuminado ── */
+.projects-fade-bar {
+  height: 140px;
+  margin-top: -140px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(13, 17, 23, 0.6) 50%,
+    #0d1117 100%    /* ← tu color de fondo */
+  );
+  transition: opacity 0.5s ease;
+}
+
+.projects-fade-bar.hidden {
+  opacity: 0;
+}
+
+/* ── Botón mostrar más / menos ── */
+.projects-show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  margin: 0.6rem auto 0;
+  padding: 6px 18px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.projects-show-more:hover {
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+}
+
+/* ── Chevron ── */
+.projects-show-more .chevron {
+  opacity: 0.5;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+.projects-show-more:hover .chevron {
+  opacity: 0.9;
+}
+
+.projects-show-more.open .chevron {
+  transform: rotate(180deg);
+}

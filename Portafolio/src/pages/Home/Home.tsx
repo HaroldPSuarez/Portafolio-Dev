@@ -1,6 +1,6 @@
 import Contact from "../../components/BtonContact/Contact/Contact";
 import Cv from "../../components/BtonContact/CV/CV";
-import PCard from "../../components/ProjectCard/PCard";
+import ProjectsSection from "../../components/ProjectsSection/ProjectsSection"; // ← nuevo import
 import { projects } from "../../data/Projects";
 import SplitText from "../../Animations/SplitText/SplitText";
 import "./Home.css";
@@ -44,6 +44,11 @@ function Home() {
 
       <section className="tech-section">
         <h2>Tecnologías</h2>
+        <p>
+          Mi stack principal de desarrollo
+          <br />
+          <div className="tech-grid"></div>
+        </p>
         <div className="tech-grid">
           <div className="tech-item">
             <ReactOriginal size={55} />
@@ -80,15 +85,8 @@ function Home() {
         </div>
       </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-
-        <div className="PcardFlex">
-          {projects.map((project) => (
-            <PCard key={project.id} project={project} />
-          ))}
-        </div>
-      </section>
+      {/* ← reemplaza la sección de projects anterior por esta línea */}
+      <ProjectsSection projects={projects} initialVisible={3} />
     </main>
   );
 }

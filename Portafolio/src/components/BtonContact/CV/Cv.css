@@ -1,26 +1,27 @@
 .Cv {
+  display: inline-flex;
+}
+
+.cv-btn {
   position: relative;
   background: rgb(63, 230, 152);
   color: #0a0a0a;
-  border: 1.5px solid transparent;
+  border: none;
   padding: 0.75rem 1.75rem;
   border-radius: 10px;
-  text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
+  font-family: inherit;
   letter-spacing: 0.02em;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   overflow: hidden;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.3s ease,
-    background 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.Cv::before {
+.cv-btn::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -34,25 +35,33 @@
   transition: transform 0.5s ease;
 }
 
-.Cv:hover::before {
+.cv-btn:hover::before {
   transform: translateX(100%);
 }
 
-.Cv:hover {
+.cv-btn:hover {
   background: rgb(45, 212, 135);
   transform: translateY(-2px);
-  box-shadow:
-    0 8px 24px rgba(63, 230, 152, 0.3),
-    0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(63, 230, 152, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.Cv:active {
+.cv-btn:active {
   transform: translateY(0px);
   box-shadow: none;
 }
 
+.cv-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
 @media (max-width: 768px) {
   .Cv {
+    width: 100%;
+  }
+
+  .cv-btn {
     padding: 0.7rem 1.4rem;
     font-size: 0.875rem;
     width: 100%;

@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Welcome from "./components/Loader/Loader";
 import LinesUp from "./components/Background/Lines/LinesUp";
 import LinesDown from "./components/Background/Lines/LinesDown";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "./App.css";
 
 function App() {
@@ -30,7 +31,13 @@ function App() {
       <LinesDown />
       <div className="Estructura">
         <Header />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <Home />
+        <ScrollToTop />
         <Footer />
       </div>
     </>

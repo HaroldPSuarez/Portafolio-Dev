@@ -52,6 +52,13 @@ article p {
   line-height: 1.6;
 }
 
+p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
 /* ── Botones ── */
 .actions {
   margin: 2rem 0 0 0;
@@ -69,9 +76,15 @@ h2 {
 
 /* ── Tecnologías ── */
 .tech-section {
-  margin: 2rem 0 4rem 0;
+  margin: 2rem 0 6rem 0;  /* ← solo cambia 4rem por 6rem */
+  
 }
-
+.tech-subtitle {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
 .tech-grid {
   display: flex;
   flex-wrap: wrap;
