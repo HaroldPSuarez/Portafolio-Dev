@@ -14,8 +14,8 @@ function Cv() {
     setLoading(true);
 
     const link = document.createElement("a");
-    link.href = "/cv-harold-pinto.pdf";
-    link.download = "CV-Harold-Pinto.pdf";
+    link.href = "/Harold-Pinto.pdf";
+    link.download = "Harold-Pinto.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
