@@ -59,6 +59,11 @@ p {
   line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+  p {
+    text-align: center;
+  }
+}
 /* ── Botones ── */
 .actions {
   margin: 2rem 0 0 0;
