@@ -1,119 +1,93 @@
-.contact-wrapper {
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+ 
+.contact-icon-btn {
   position: relative;
-  display: inline-block;
-}
-
-/* BOTÓN */
-
-.ContactBtn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  padding: 12px 18px;
-
-  border: none;
-  border-radius: 14px;
-
-  background: #111827;
-  color: white;
-
-  font-size: 15px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition:
-    background 0.25s ease,
-    transform 0.2s ease;
-}
-
-.ContactBtn:hover {
-  background: #1f2937;
-  transform: translateY(-1px);
-}
-
-.contact-chevron {
-  transition: transform 0.25s ease;
-}
-
-.ContactBtn.open .contact-chevron {
-  transform: rotate(180deg);
-}
-
-/* DROPDOWN */
-
-.contact-dropdown {
-  position: absolute;
-
-  top: calc(100% + 12px);
-  left: 0;
-
-  min-width: 220px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  padding: 10px;
-
-  border-radius: 18px;
-
-  background: rgba(17, 24, 39, 0.95);
-
-  backdrop-filter: blur(14px);
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.25);
-
-  opacity: 0;
-  pointer-events: none;
-
-  transform: translateY(-10px) scale(0.98);
-
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-
-  z-index: 100;
-}
-
-.contact-dropdown.open {
-  opacity: 1;
-  pointer-events: auto;
-
-  transform: translateY(0) scale(1);
-}
-
-/* OPCIONES */
-
-.contact-option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  padding: 12px 14px;
-
-  border-radius: 12px;
-
-  text-decoration: none;
-  color: #f8fafc;
-
-  font-size: 14px;
-  font-weight: 500;
-
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-
-.contact-option:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateX(3px);
-}
-
-.contact-icon {
+ 
   display: flex;
   align-items: center;
   justify-content: center;
+ 
+  width: 44px;
+  height: 44px;
+ 
+  border-radius: 12px;
+ 
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+ 
+  color: rgba(255, 255, 255, 0.75);
+ 
+  text-decoration: none;
+ 
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+ 
+.contact-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+ 
+.contact-icon-btn:active {
+  transform: translateY(0px) scale(0.96);
+}
+ 
+/* Tooltip */
+ 
+.contact-icon-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+ 
+  background: #1f2937;
+  color: #f1f5f9;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+ 
+  padding: 5px 10px;
+  border-radius: 8px;
+ 
+  pointer-events: none;
+  opacity: 0;
+ 
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+ 
+.contact-icon-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1f2937;
+}
+ 
+.contact-icon-btn:hover .contact-icon-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+ 
+/* Responsive: en pantallas muy pequeñas los iconos se achican un poco */
+ 
+@media (max-width: 400px) {
+  .contact-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
 }

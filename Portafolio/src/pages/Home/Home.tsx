@@ -86,7 +86,79 @@ function Home() {
       </section>
 
       {/* ← reemplaza la sección de projects anterior por esta línea */}
-      <ProjectsSection projects={projects} initialVisible={3} />
+      <ProjectsSection
+        projects={projects}
+        initialVisible={
+          window.innerWidth <= 600 ? 2 : window.innerWidth <= 1100 ? 4 : 3
+        }
+      />
+
+      <section className="profile-section">
+        <h2>Perfil técnico</h2>
+
+        <p className="profile-description">
+          Desarrollo interfaces web modernas enfocadas en rendimiento,
+          accesibilidad y experiencia de usuario. Tengo experiencia en
+          tecnologías frontend, herramientas de desarrollo, bases de datos y
+          fundamentos de redes y sistemas operativos.
+        </p>
+
+        <div className="profile-grid">
+          <div className="profile-card">
+            <h3>Lenguajes de programación</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Frameworks y librerías</h3>
+            <ul>
+              <li>React</li>
+              <li>Angular</li>
+              <li>Spring Boot</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Herramientas de desarrollo</h3>
+            <ul>
+              <li>Visual Studio Code</li>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Sistemas operativos</h3>
+            <ul>
+              <li>Windows 8, 10 y 11</li>
+              <li>Linux (Red Hat)</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Bases de datos</h3>
+            <ul>
+              <li>SQL</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Redes y conocimientos técnicos</h3>
+            <ul>
+              <li>Direccionamiento IP</li>
+              <li>Subnetting básico</li>
+              <li>Configuración de redes</li>
+              <li>Topologías y conectividad</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

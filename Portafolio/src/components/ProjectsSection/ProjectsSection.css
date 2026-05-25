@@ -28,7 +28,7 @@
     to bottom,
     transparent 0%,
     rgba(13, 17, 23, 0.6) 50%,
-    #0d1117 100%    /* ← tu color de fondo */
+    #0d1117 100%
   );
   transition: opacity 0.5s ease;
 }
@@ -64,7 +64,9 @@
 /* ── Chevron ── */
 .projects-show-more .chevron {
   opacity: 0.5;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s ease;
 }
 
 .projects-show-more:hover .chevron {
@@ -73,4 +75,26 @@
 
 .projects-show-more.open .chevron {
   transform: rotate(180deg);
+}
+
+/* ── Grid de tarjetas ── */
+.PcardFlex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* pantalla mediana */
+@media (max-width: 1100px) {
+  .PcardFlex {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* móvil */
+@media (max-width: 600px) {
+  .PcardFlex {
+    grid-template-columns: 1fr;
+  }
 }
