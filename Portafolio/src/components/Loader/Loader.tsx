@@ -16,7 +16,7 @@ const Welcome = ({ onFinish }: { onFinish: () => void }) => {
   return (
     <div className="welcome">
       <SplitText
-        text="Welcome"
+        text="En Desarrollo"
         className="welcome-text"
         leaving={leaving}
         onComplete={onFinish} // cuando termina la salida → cambia de página
