@@ -18,7 +18,7 @@ import {
 function Home() {
   return (
     <main className="Home">
-      <article className="hero">
+      <article className="hero" id="home">
         <div className="hero-text">
           <SplitText
             text="Harold Pinto"
@@ -85,7 +85,7 @@ function Home() {
         </div>
       </section>
 
-      {/* ← reemplaza la sección de projects anterior por esta línea */}
+      {/*  */}
       <ProjectsSection
         projects={projects}
         initialVisible={
@@ -94,7 +94,7 @@ function Home() {
       />
 
       <section className="profile-section">
-        <h2>Perfil técnico</h2>
+        <h2 id="about">Perfil técnico</h2>
 
         <p className="profile-description">
           Desarrollo interfaces web modernas enfocadas en rendimiento,

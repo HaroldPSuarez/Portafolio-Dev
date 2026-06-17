@@ -33,9 +33,8 @@ function ProjectsSection({ projects, initialVisible = 3 }: Props) {
                 <PCard key={`hidden-${project.id}-${i}`} project={project} />
               ))}
             </div>
+            <div className={`projects-fade-bar ${showAll ? "hidden" : ""}`} />
           </div>
-
-          <div className={`projects-fade-bar ${showAll ? "hidden" : ""}`} />
 
           <button
             className={`projects-show-more ${showAll ? "open" : ""}`}

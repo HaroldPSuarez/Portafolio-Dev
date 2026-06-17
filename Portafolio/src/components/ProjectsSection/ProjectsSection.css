@@ -1,11 +1,12 @@
 /* ── Wrapper ── */
 .projects-more-wrapper {
   position: relative;
-  margin-top: 0;
+  margin-top: 2rem;
 }
 
 /* ── Fila oculta ── */
 .projects-hidden-row {
+  position: relative; /* ← necesario para que el fade-bar se ancle aquí */
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.65s cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,8 +22,11 @@
 
 /* ── Barra de difuminado ── */
 .projects-fade-bar {
+  position: absolute; /* ← ya no usa margin negativo */
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 140px;
-  margin-top: -140px;
   pointer-events: none;
   background: linear-gradient(
     to bottom,
@@ -90,11 +94,19 @@
   .PcardFlex {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .projects-more-wrapper {
+    margin-top: 1.5rem;
+  }
 }
 
 /* móvil */
 @media (max-width: 600px) {
   .PcardFlex {
     grid-template-columns: 1fr;
+  }
+
+  .projects-more-wrapper {
+    margin-top: 1.25rem;
   }
 }
