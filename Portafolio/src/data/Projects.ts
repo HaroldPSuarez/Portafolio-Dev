@@ -16,7 +16,7 @@ export const projects: Project[] = [
     technologies: ["React", "SpringBoot", "HTML", "CSS", "JSX", "SQL"],
     demoLink: "Link Proximamente",
     codeLink: "https://github.com/HaroldPSuarez/Riesgo_crediticio.git",
-    image: "/1.jpg",
+    image: "/1.webp",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     technologies: ["Angular", "JSX", "CSS", "HTML", "SQL"],
     demoLink: "lINK Proximamente",
     codeLink: "https://github.com/HaroldPSuarez/AngularPage.git",
-    image: "/2.png",
+    image: "/2.webp",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     technologies: ["React", "TS", "CSS", "HTML"],
     demoLink: "https://portafolio-dev-red.vercel.app/",
     codeLink: "https://github.com/HaroldPSuarez/Portafolio-Dev.git",
-    image: "/3.png",
+    image: "/3.webp",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     technologies: ["React", "SpringBoot", "HTML", "CSS", "JSX", "SQL"],
     demoLink: "Link Proximamente",
     codeLink: "https://github.com/HaroldPSuarez/Riesgo_crediticio.git",
-    image: "/1.jpg",
+    image: "/4.webp",
   },
   {
     id: 5,
@@ -55,6 +55,6 @@ export const projects: Project[] = [
     technologies: ["Angular", "JSX", "CSS", "HTML", "SQL"],
     demoLink: "lINK Proximamente",
     codeLink: "https://github.com/HaroldPSuarez/AngularPage.git",
-    image: "/2.png",
+    image: "/5.webp",
   },
 ];

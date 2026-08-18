@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
@@ -9,14 +9,9 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import "./App.css";
 
 function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
-
-  useEffect(() => {
-    const seen = sessionStorage.getItem("welcome-seen");
-    if (seen) {
-      setShowWelcome(false);
-    }
-  }, []);
+  const [showWelcome, setShowWelcome] = useState(
+    () => !sessionStorage.getItem("welcome-seen")
+  );
 
   const finishWelcome = () => {
     sessionStorage.setItem("welcome-seen", "true");
@@ -26,6 +21,7 @@ function App() {
   return showWelcome ? (
     <Welcome onFinish={finishWelcome} />
   ) : (
+     //estructura principal {#125,15}
     <>
       <LinesUp />
       <LinesDown />

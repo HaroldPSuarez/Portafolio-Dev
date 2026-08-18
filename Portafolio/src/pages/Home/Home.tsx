@@ -4,16 +4,16 @@ import ProjectsSection from "../../components/ProjectsSection/ProjectsSection"; 
 import { projects } from "../../data/Projects";
 import SplitText from "../../Animations/SplitText/SplitText";
 import "./Home.css";
+import { FaReact } from "react-icons/fa";
 import {
-  ReactOriginal,
-  TypescriptOriginal,
-  JavascriptOriginal,
-  Html5Original,
-  Css3Original,
-  AngularOriginal,
-  SpringOriginal,
-  MysqlOriginal,
-} from "devicons-react";
+  SiTypescript,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiAngular,
+  SiSpringboot,
+  SiMysql,
+} from "react-icons/si";
 
 function Home() {
   return (
@@ -51,35 +51,35 @@ function Home() {
         </p>
         <div className="tech-grid">
           <div className="tech-item">
-            <ReactOriginal size={55} />
+            <FaReact size={55} color="#61DAFB" />
             <span>React</span>
           </div>
           <div className="tech-item">
-            <TypescriptOriginal size={55} />
+            <SiTypescript size={55} color="#3178C6" />
             <span>TypeScript</span>
           </div>
           <div className="tech-item">
-            <JavascriptOriginal size={55} />
+            <SiJavascript size={55} color="#F7DF1E" />
             <span>JavaScript</span>
           </div>
           <div className="tech-item">
-            <Html5Original size={55} />
+            <SiHtml5 size={55} color="#E34F26" />
             <span>HTML</span>
           </div>
           <div className="tech-item">
-            <Css3Original size={55} />
+            <SiCss size={55} color="#1572B6" />
             <span>CSS</span>
           </div>
           <div className="tech-item">
-            <AngularOriginal size={55} />
+            <SiAngular size={55} color="#DD0031" />
             <span>Angular</span>
           </div>
           <div className="tech-item">
-            <SpringOriginal size={55} />
+            <SiSpringboot size={55} color="#6DB33F" />
             <span>Spring Boot</span>
           </div>
           <div className="tech-item">
-            <MysqlOriginal size={55} />
+            <SiMysql size={55} color="#4479A1" />
             <span>SQL</span>
           </div>
         </div>
@@ -107,19 +107,42 @@ function Home() {
           <div className="profile-card">
             <h3>Lenguajes de programación</h3>
             <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
               <li>JavaScript</li>
               <li>TypeScript</li>
+              <li>Java</li>
             </ul>
           </div>
 
           <div className="profile-card">
-            <h3>Frameworks y librerías</h3>
+            <h3>Frontend</h3>
             <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
               <li>React</li>
               <li>Angular</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li>
               <li>Spring Boot</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Bases de datos</h3>
+            <ul>
+              <li>SQL</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+
+          <div className="profile-card">
+            <h3>Autenticación y seguridad</h3>
+            <ul>
+              <li>JWT</li>
             </ul>
           </div>
 
@@ -137,14 +160,6 @@ function Home() {
             <ul>
               <li>Windows 8, 10 y 11</li>
               <li>Linux (Red Hat)</li>
-            </ul>
-          </div>
-
-          <div className="profile-card">
-            <h3>Bases de datos</h3>
-            <ul>
-              <li>SQL</li>
-              <li>MySQL</li>
             </ul>
           </div>
 
